@@ -6,7 +6,7 @@ const Register = () => {
         <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover" >
         <div className=" max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black">
          <h1 className="text-2xl font-bold text-center">Register</h1>
-         <form noValidate="" action="" className="space-y-6">
+         <form  className="space-y-6">
            <div className="space-y-1 text-sm">
              <label htmlFor="username" className="block font-bold">
                Username
@@ -27,7 +27,7 @@ const Register = () => {
                type="email"
                name="email"
                id="email"
-               placeholder="Email"
+               placeholder="Your Email"
                className="w-full lg:px-2  py-3 rounded-md  border-gray-700 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
              />
            </div>
@@ -39,7 +39,7 @@ const Register = () => {
                type="text"
                name="photo"
                id="photo"
-               placeholder="photoURL"
+               placeholder="pest your photoURL"
                className="w-full lg:px-2  py-3 rounded-md  border-gray-700 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
              />
            </div>
