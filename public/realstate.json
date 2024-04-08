@@ -1,0 +1,75 @@
+[
+    {
+      "id": "001",
+      "image": "https://example.com/image1.jpg",
+      "estate_title": "Modern Single-Family Home",
+      "segment": "Single-family homes",
+      "description": "Beautiful modern single-family home with spacious interiors and stunning architecture.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Suburban neighborhood, City X",
+      "facilities": ["spacious living room", "backyard garden", "modern kitchen"]
+    },
+    {
+      "id": "002",
+      "image": "https://example.com/image2.jpg",
+      "estate_title": "Cozy Townhouse",
+      "segment": "Townhouses",
+      "description": "Charming townhouse with cozy interiors and a private backyard.",
+      "price": "$350,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "Quaint neighborhood, City Y",
+      "facilities": ["open-plan layout", "private garage", "patio"]
+    },
+    {
+      "id": "003",
+      "image": "https://example.com/image3.jpg",
+      "estate_title": "Luxury Downtown Apartment",
+      "segment": "Apartments",
+      "description": "Luxurious apartment located in the heart of the city with stunning skyline views.",
+      "price": "$4,000/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "Downtown area, City Z",
+      "facilities": ["high-end appliances", "rooftop pool", "fitness center"]
+    },
+    {
+      "id": "004",
+      "image": "https://example.com/image4.jpg",
+      "estate_title": "Student Housing Complex",
+      "segment": "Student housing",
+      "description": "Modern student housing complex conveniently located near the university campus.",
+      "price": "$800/month",
+      "status": "rent",
+      "area": "800 sq ft",
+      "location": "University district, City X",
+      "facilities": ["fully furnished units", "study lounges", "on-site laundry"]
+    },
+    {
+      "id": "005",
+      "image": "https://example.com/image5.jpg",
+      "estate_title": "Senior Living Community",
+      "segment": "Senior living communities",
+      "description": "Gated community offering independent and assisted living options for seniors.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "Retirement village, City Y",
+      "facilities": ["24-hour staff", "restaurant-style dining", "wellness center"]
+    },
+    {
+      "id": "006",
+      "image": "https://example.com/image6.jpg",
+      "estate_title": "Vacation Rental Cottage",
+      "segment": "Vacation rentals",
+      "description": "Quaint cottage nestled in the countryside, perfect for a relaxing vacation getaway.",
+      "price": "$200/night",
+      "status": "rent",
+      "area": "600 sq ft",
+      "location": "Rural area, City Z",
+      "facilities": ["scenic views", "fireplace", "outdoor seating"]
+    }
+  ]
+  
