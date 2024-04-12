@@ -12,7 +12,15 @@ import Slide1 from "../../slider/Slide1";
 import Slider2 from "../../slider/Slider2";
 import Slider3 from "../../slider/Slider3";
 import Slider4 from "../../slider/Slider4";
+import { useEffect, useState } from "react";
+import SingleCard from "./SingleCard";
 const Home = () => {
+  const [card,setCard]=useState([])
+  useEffect(()=>{
+   fetch('realstate.json')
+    .then(res=>res.json())
+    .then(data=>setCard(data))
+  },[])
   return (
     <div>
       <Swiper
@@ -37,6 +45,15 @@ const Home = () => {
           <Slider4></Slider4>
         </SwiperSlide>
       </Swiper>
+<div className="my-20 text-center">
+  <h1 className="text-4xl font-bold "> Top Listed Estate</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, recusandae.</p>
+</div>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 ">
+          {
+            card.map((carditem,idx)=><SingleCard key={idx} carditem={carditem}></SingleCard>)
+          }
+      </div>
     </div>
   );
 };

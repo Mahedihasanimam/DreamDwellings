@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 const Login = () => {
   return (
-   <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover" >
-     <div className=" max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black">
+   <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover " >
+     <div className=" animate__animated animate__fadeInUp max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black ">
       <h1 className="text-2xl font-bold text-center">Login</h1>
       <form noValidate="" action="" className="space-y-6">
         <div className="space-y-1 text-sm">

@@ -10,7 +10,7 @@ const Slider4 = () => {
           </h1>
           <div className="border-l-4 border-r-0 border-t-0 border-b-0 border-solid mb-8 border-[#FF5A3D]">
             <p className=" ml-4 ">
-              Discover your perfect home with us! Let's match you with the house
+              Discover your perfect home with us! Lets match you with the house
               <br /> of your dreams. Your ideal home awaits here
             </p>
           </div>

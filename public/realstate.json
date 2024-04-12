@@ -1,75 +1,74 @@
 [
-    {
-      "id": "001",
-      "image": "https://example.com/image1.jpg",
-      "estate_title": "Modern Single-Family Home",
-      "segment": "Single-family homes",
-      "description": "Beautiful modern single-family home with spacious interiors and stunning architecture.",
-      "price": "$500,000",
-      "status": "sale",
-      "area": "2500 sq ft",
-      "location": "Suburban neighborhood, City X",
-      "facilities": ["spacious living room", "backyard garden", "modern kitchen"]
-    },
-    {
-      "id": "002",
-      "image": "https://example.com/image2.jpg",
-      "estate_title": "Cozy Townhouse",
-      "segment": "Townhouses",
-      "description": "Charming townhouse with cozy interiors and a private backyard.",
-      "price": "$350,000",
-      "status": "sale",
-      "area": "1800 sq ft",
-      "location": "Quaint neighborhood, City Y",
-      "facilities": ["open-plan layout", "private garage", "patio"]
-    },
-    {
-      "id": "003",
-      "image": "https://example.com/image3.jpg",
-      "estate_title": "Luxury Downtown Apartment",
-      "segment": "Apartments",
-      "description": "Luxurious apartment located in the heart of the city with stunning skyline views.",
-      "price": "$4,000/month",
-      "status": "rent",
-      "area": "1200 sq ft",
-      "location": "Downtown area, City Z",
-      "facilities": ["high-end appliances", "rooftop pool", "fitness center"]
-    },
-    {
-      "id": "004",
-      "image": "https://example.com/image4.jpg",
-      "estate_title": "Student Housing Complex",
-      "segment": "Student housing",
-      "description": "Modern student housing complex conveniently located near the university campus.",
-      "price": "$800/month",
-      "status": "rent",
-      "area": "800 sq ft",
-      "location": "University district, City X",
-      "facilities": ["fully furnished units", "study lounges", "on-site laundry"]
-    },
-    {
-      "id": "005",
-      "image": "https://example.com/image5.jpg",
-      "estate_title": "Senior Living Community",
-      "segment": "Senior living communities",
-      "description": "Gated community offering independent and assisted living options for seniors.",
-      "price": "$3,500/month",
-      "status": "rent",
-      "area": "1000 sq ft",
-      "location": "Retirement village, City Y",
-      "facilities": ["24-hour staff", "restaurant-style dining", "wellness center"]
-    },
-    {
-      "id": "006",
-      "image": "https://example.com/image6.jpg",
-      "estate_title": "Vacation Rental Cottage",
-      "segment": "Vacation rentals",
-      "description": "Quaint cottage nestled in the countryside, perfect for a relaxing vacation getaway.",
-      "price": "$200/night",
-      "status": "rent",
-      "area": "600 sq ft",
-      "location": "Rural area, City Z",
-      "facilities": ["scenic views", "fireplace", "outdoor seating"]
-    }
-  ]
-  
+  {
+    "id": "001",
+    "image": "https://i.ibb.co/nj3Xy5R/istockphoto-1396856251-612x612.jpg",
+    "estate_title": "Modern Single-Family Home",
+    "segment": "Single-family homes",
+    "description": "This modern single-family home is a stunning example of contemporary living, combining elegance and functionality. As you step inside, you are greeted by an open-concept layout that seamlessly connects the living, dining, and kitchen areas. The spacious living room boasts large windows, allowing natural light to flood the space and offering a picturesque view of the lush surroundings. The gourmet kitchen is equipped with high-end appliances, ample counter space, and a breakfast bar, making it a delight for culinary enthusiasts. The home features multiple bedrooms, including a luxurious master suite with a walk-in closet and an en-suite bathroom complete with a soaking tub and dual vanities. The backyard garden is a private oasis, perfect for outdoor entertaining or relaxing by the pool. Additionally, the property offers smart home technology, energy-efficient fixtures, and a two-car garage. Located in a family-friendly suburban neighborhood in City X, this home provides easy access to schools, parks, and shopping centers, making it an ideal choice for families seeking a comfortable and stylish residence.",
+    "price": "$750,000",
+    "status": "sale",
+    "area": "3,000 sq ft",
+    "location": "Suburban neighborhood, City X",
+    "facilities": ["spacious living room", "gourmet kitchen", "backyard garden", "pool"]
+  },
+  {
+    "id": "002",
+    "image": "https://i.ibb.co/ZXzCxyk/istockphoto-94994992-612x612.jpg",
+    "estate_title": "Charming Townhouse",
+    "segment": "Townhouses",
+    "description": "This charming townhouse exudes warmth and character, providing a cozy retreat for its residents. The home features a welcoming front porch that leads into a thoughtfully designed interior. The main floor includes a comfortable living room with a fireplace, a dining area with a view of the backyard, and a modern kitchen with stainless steel appliances and granite countertops. Upstairs, the townhouse offers well-appointed bedrooms with ample closet space, and the master suite boasts an en-suite bathroom with elegant finishes. The property also includes a private garage, offering convenience and security for residents. The backyard patio provides a peaceful space for outdoor dining or relaxation, surrounded by well-maintained landscaping. Located in a quaint neighborhood in City Y, this townhouse is close to local amenities, schools, and parks, making it an excellent choice for families and individuals seeking a low-maintenance, community-focused lifestyle.",
+    "price": "$450,000",
+    "status": "sale",
+    "area": "2,000 sq ft",
+    "location": "Quaint neighborhood, City Y",
+    "facilities": ["fireplace", "granite countertops", "private garage", "backyard patio"]
+  },
+  {
+    "id": "003",
+    "image": "https://i.ibb.co/nrdvBPY/istockphoto-122343306-612x612.jpg",
+    "estate_title": "Luxury Downtown Apartment",
+    "segment": "Apartments",
+    "description": "Experience the epitome of urban sophistication in this luxury downtown apartment. Located in a vibrant area of City Z, this apartment offers stunning views of the city skyline and is conveniently close to the best restaurants, shopping, and entertainment options. The interior boasts an open floor plan with high ceilings and floor-to-ceiling windows, providing an abundance of natural light and panoramic views. The gourmet kitchen is fitted with top-of-the-line appliances, quartz countertops, and ample storage space. The spacious bedrooms are designed for comfort and tranquility, while the bathrooms feature spa-like amenities such as rain showers and luxurious finishes. Residents have access to exclusive amenities, including a rooftop pool, fitness center, and concierge services. The building is equipped with state-of-the-art security and smart home technology for added peace of mind. Whether you're a professional seeking a chic urban retreat or a couple looking for a luxurious lifestyle, this apartment offers the perfect blend of style and convenience.",
+    "price": "$4,500/month",
+    "status": "rent",
+    "area": "1,800 sq ft",
+    "location": "Downtown area, City Z",
+    "facilities": ["rooftop pool", "fitness center", "concierge services"]
+  },
+  {
+    "id": "004",
+    "image": "https://i.ibb.co/dgHngMt/istockphoto-147205632-612x612.jpg",
+    "estate_title": "Modern Student Housing Complex",
+    "segment": "Student housing",
+    "description": "This modern student housing complex is designed to cater to the needs of today's students, offering a safe, comfortable, and dynamic living environment. Situated near the university campus, the complex provides easy access to classes and campus facilities. The apartments are fully furnished, featuring spacious living areas, well-equipped kitchens, and private bedrooms. The complex also includes study lounges and communal areas where students can collaborate or relax. Additional amenities such as on-site laundry facilities, secure parking, and high-speed internet enhance the overall living experience. The complex is committed to student safety, offering secure access, security patrols, and support services. The surrounding area includes cafes, shops, and recreational facilities, providing students with a vibrant community to thrive in.",
+    "price": "$900/month",
+    "status": "rent",
+    "area": "900 sq ft",
+    "location": "University district, City A",
+    "facilities": ["fully furnished", "study lounges", "on-site laundry", "high-speed internet"]
+  },
+  {
+    "id": "005",
+    "image": "https://i.ibb.co/t3Xcsjr/istockphoto-1328873313-612x612.jpg",
+    "estate_title": "Luxurious Senior Living Community",
+    "segment": "Senior living communities",
+    "description": "This luxurious senior living community offers residents an exceptional lifestyle with a range of amenities and services tailored to their needs. The community provides independent and assisted living options, ensuring residents receive the appropriate level of care and support. The beautifully designed apartments are spacious and equipped with modern conveniences such as walk-in showers and safety features. Residents can enjoy a variety of on-site facilities, including a wellness center, swimming pool, and restaurant-style dining options. The community also offers a range of social activities and events, encouraging residents to stay active and engaged. Staffed 24/7, the community provides peace of mind and personalized care. The picturesque grounds offer walking paths and gardens, creating a serene and tranquil environment. Whether residents seek privacy or social interaction, this senior living community caters to all preferences and ensures a fulfilling lifestyle for its members.",
+    "price": "$4,000/month",
+    "status": "rent",
+    "area": "1,200 sq ft",
+    "location": "Serene neighborhood, City B",
+    "facilities": ["wellness center", "swimming pool", "restaurant-style dining"]
+  },
+  {
+    "id": "006",
+    "image": "https://i.ibb.co/qJyJr92/istockphoto-1344026356-612x612.jpg",
+    "estate_title": "Charming Vacation Rental Cottage",
+    "segment": "Vacation rentals",
+    "description": "Escape to this charming vacation rental cottage nestled in the picturesque countryside. Perfect for a peaceful retreat, this cozy cottage offers a tranquil setting surrounded by natural beauty. The cottage features a warm and inviting interior with rustic touches, a well-equipped kitchen, and a comfortable living area with a fireplace. The bedroom provides a restful space with comfortable bedding and serene views. Outside, guests can enjoy a private garden with outdoor seating, perfect for relaxing or dining al fresco. The cottage also includes a fire pit for cozy evenings under the stars. Guests can explore the surrounding area, which offers hiking trails, scenic vistas, and local attractions. This vacation rental cottage provides a serene getaway for couples or small families seeking to unwind and immerse themselves in nature.",
+    "price": "$250/night",
+    "status": "rent",
+    "area": "700 sq ft",
+    "location": "Countryside, City C",
+    "facilities": ["fireplace", "private garden", "outdoor seating", "fire pit"]
+  }
+]

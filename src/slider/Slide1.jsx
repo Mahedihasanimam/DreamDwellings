@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import 'animate.css';
 const Slide1 = () => {
   return (
-    <div className=" bg-[#F2F6F7]  max-h-[600px] min-h-[600px]">
+    <div className=" bg-[#F2F6F7]   max-h-[600px] min-h-[600px]">
       <div className="lg:flex md:flex  justify-between items-center">
         <div className="lg:px-24 md:px-4 p-8 ">
           <h1 className="lg:text-4xl md:text-xl font-bold animate__animated animate__fadeInLeft">
