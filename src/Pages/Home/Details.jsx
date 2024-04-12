@@ -23,7 +23,7 @@ const Details = () => {
       <div className="card-body lg:w-1/2">
         <span>{id}</span>
         <h2 className="text-2xl font-bold">{estate_title}</h2>
-        <p>{description}</p>
+        <p className="opacity-70">{description}</p>
 
         <div>
           <div className="overflow-x-auto">

@@ -47,7 +47,7 @@ const Home = () => {
       </Swiper>
 <div className="my-20 text-center">
   <h1 className="text-4xl font-bold "> Top Listed Estate</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, recusandae.</p>
+  <p className="opacity-70"> we offers luxury properties with modern amenities and breathtaking views in prime locations worldwide</p>
 </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 ">
           {
