@@ -1,23 +1,67 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import 'animate.css';
-
+import { useForm } from "react-hook-form"
+import { useContext } from "react";
+import { AuthContext } from "../Route/AuthProvider";
+import toast from "react-hot-toast";
 const Login = () => {
+  const {login,googleLogin}=useContext(AuthContext)
+  const location=useLocation()
+  console.log(location)
+  const navigate=useNavigate()
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm()
+  const onSubmit = (data) =>{
+    login(data.email,data.password)
+    .then(result=>{
+      toast.success('Login succesfully')
+      navigate('/')
+      console.log(result)
+    })
+    .catch(err=>{
+      toast.error(err.message.slice(10))
+      console.log(err)
+    })
+   
+  } 
+// google login 
+
+const handlegoogle=()=>{
+  googleLogin()
+  .then(result=>{
+    toast.success('Login succesfully')
+    navigate(location?.state || '/')
+    console.log(result)
+  })
+  .catch(err=>{
+    toast.error(err.message.slice(10))
+    console.log(err)
+  })
+}
   return (
+    
    <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover " >
      <div className=" animate__animated animate__fadeInUp max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black ">
       <h1 className="text-2xl font-bold text-center">Login</h1>
-      <form noValidate="" action="" className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-1 text-sm">
-          <label htmlFor="username" className="block ">
-            Username
+          <label htmlFor="email" className="block ">
+            Email
           </label>
           <input
             type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
+            name="email"
+            id="email"
+            placeholder="Email"
             className="w-full lg:px-2  py-3 rounded-md  border-blue-600 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
+            {...register("email", { required: true })}
           />
+          {errors.email && <span>This field is required</span>}
+    
         </div>
         <div className="space-y-1 text-sm">
           <label htmlFor="password" className="block font-bold">
@@ -29,7 +73,9 @@ const Login = () => {
             id="password"
             placeholder="Password"
             className="w-full lg:px-2 py-3 rounded-md  border-opacity-30 border-blue-600   focus:border-violet-400"
+            {...register("password", { required: true })}
           />
+          {errors.password && <span>This field is required</span>}
           <div className="flex justify-end text-xs text-gray-400">
             <a className="text-blue-600" rel="noopener noreferrer" href="#">
               Forgot Password?
@@ -46,7 +92,7 @@ const Login = () => {
         <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
       </div>
       <div className="flex justify-center space-x-4">
-        <button aria-label="Log in with Google" className="p-3 rounded-sm">
+        <button  onClick={handlegoogle} aria-label="Log in with Google" className="p-3 cursor-pointer rounded-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"

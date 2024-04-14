@@ -8,6 +8,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Details from "../Pages/Home/Details";
 import ErrPage from "./ErrPage";
+import UserProfile from "../Pages/Home/UserProfile";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -25,7 +27,11 @@ export const router=createBrowserRouter([
             },
             {
                 path:'/profile',
-                element:<Profile></Profile>
+                element:<PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path:'/user',
+                element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
             }
             ,
             {
@@ -44,6 +50,7 @@ export const router=createBrowserRouter([
                 element:<Details></Details>,
                 loader:()=>fetch('/realstate.json')
             }
+            
             
         ]
        
