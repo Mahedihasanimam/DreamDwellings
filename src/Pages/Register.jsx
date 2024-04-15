@@ -7,10 +7,12 @@ import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 import auth from "../firbase/firbase.config";
-
+import { VscEyeClosed } from "react-icons/vsc";
+import { RxEyeOpen } from "react-icons/rx";
 const Register = () => {
     const {createUser,logout}=useContext(AuthContext)
     const photoRegex = /^https?:\/\/(?:www\.)?[^\s/$.?#].[^\s]*$/;
+    const [showpass,setShowPass]=useState(true)
     const navigate=useNavigate()
   const {
     register,
@@ -60,7 +62,8 @@ const Register = () => {
   }
     return (
         <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover" >
-        <div className=" animate__animated animate__fadeInUp max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black">
+        <div className=" max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black" data-aos="fade-up"
+     data-aos-duration="1000">
          <h1 className="text-2xl font-bold text-center">Register</h1>
          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
            <div className="space-y-1 text-sm">
@@ -117,8 +120,9 @@ const Register = () => {
              <label htmlFor="password" className="block font-bold">
                Password
              </label>
+             <div className="relative">
              <input
-               type="password"
+               type={showpass && "password" || "text"}
                name="password"
                id="password"
                placeholder="Password"
@@ -126,7 +130,12 @@ const Register = () => {
              
                {...register("password", { required: "password is required" })}
                aria-invalid={errors.password ? "true" : "false"}
+              
              />
+             <p onClick={()=>setShowPass(!showpass)} className="absolute top-0 right-0 cursor-pointer" >{
+              showpass && <VscEyeClosed></VscEyeClosed> || <RxEyeOpen></RxEyeOpen>
+             }</p>
+             </div>
               {errors.password && <p className="text-red-500" role="alert">{errors.password.message}</p>}
              <div className="flex justify-end text-xs text-gray-400">
                <a className="text-blue-600" rel="noopener noreferrer" href="#">

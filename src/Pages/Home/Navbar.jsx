@@ -8,27 +8,27 @@ const Navbar = () => {
     const navbar=<>
     <li className="font-semibold ">
         <NavLink to={'/'} className={({ isActive}) =>
-   isActive ? "text-[#FF5A3D] no-underline" : " no-underline"
+   isActive ? "text-[#FF5A3D] bg-gray-300 no-underline" : " text-black no-underline"
   } >Home</NavLink>
     </li>
     <li className="font-semibold">
         <NavLink  to={'/profile'} className={({ isActive}) =>
-   isActive ? "text-[#FF5A3D] no-underline" : " no-underline"
+   isActive ? "text-[#FF5A3D] bg-gray-300 no-underline" : " text-black no-underline"
   }>Update profile</NavLink>
     </li>
     <li className="font-semibold">
         <NavLink  to={'/user'} className={({ isActive}) =>
-   isActive ? "text-[#FF5A3D] no-underline" : " no-underline"
+   isActive ? "text-[#FF5A3D] bg-gray-300 no-underline" : " text-black no-underline"
   }>User profile</NavLink>
     </li>
     <li className="font-semibold">
         <NavLink  to={'/contact'} className={({ isActive}) =>
-   isActive ? "text-[#FF5A3D] no-underline" : " no-underline"
+   isActive ? "text-[#FF5A3D] bg-gray-300 no-underline" : " text-black no-underline"
   }>Contact Us</NavLink>
     </li>
     </>
   return (
-    <div className="navbar px-0">
+    <div className="navbar px-0 fixed  z-50 max-w-[1440px]  top-0 shadow-sm mb-[200px] bg-white opacity-80">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,7 +56,7 @@ const Navbar = () => {
           }
           </ul>
         </div>
-        <Link to={'/'} className="lg:text-4xl no-underline text-xl font-bold"><span className="text-[#FF5A3D]">D</span>ream Dwellings</Link>
+        <Link to={'/'} className="lg:text-4xl no-underline text-black text-xl font-bold"><span className="text-[#FF5A3D]">D</span>ream Dwellings</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

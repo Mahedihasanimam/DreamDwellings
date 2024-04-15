@@ -4,8 +4,10 @@ const Slide1 = () => {
   return (
     <div className=" bg-[#F2F6F7]   max-h-[600px] min-h-[600px]">
       <div className="lg:flex md:flex  justify-between items-center">
-        <div className="lg:px-24 md:px-4 p-8 ">
-          <h1 className="lg:text-4xl md:text-xl font-bold animate__animated animate__fadeInLeft">
+        <div className="lg:px-24 md:px-4 p-8 " data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1000">
+          <h1 className="lg:text-4xl md:text-xl font-bold " >
             Find Your Dream <br /> House By Us
           </h1>
           <div className="border-l-4 border-r-0 border-t-0 border-b-0 border-solid mb-8 border-[#FF5A3D]">
@@ -29,7 +31,7 @@ const Slide1 = () => {
           </Link>
         </div>
 
-        <div className=" lg:py-8 animate__animated animate__fadeInRight animate__delay-1s">
+        <div className=" lg:py-8 animate__animated animate__fadeInRight ">
           <img src="/src/assets/img/heroimg.png" alt="" />
         </div>
       </div>

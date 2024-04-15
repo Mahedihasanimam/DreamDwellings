@@ -5,7 +5,8 @@ const Slider2 = () => {
     return (
         <div className=" bg-[#F2F6F7]  max-h-[600px] min-h-[600px]">
       <div className="lg:flex md:flex  justify-between items-center">
-        <div className="lg:px-24 md:px-4 p-8 ">
+        <div className="lg:px-24 md:px-4 p-8 "data-aos="fade-up"
+     data-aos-duration="1000">
           <h1 className="lg:text-4xl md:text-xl font-bold">
             Find Your Dream <br /> House By Us
           </h1>

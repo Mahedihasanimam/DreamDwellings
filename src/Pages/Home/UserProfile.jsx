@@ -24,7 +24,8 @@ const UserProfile = () => {
             <p className=" text-xs  text-wrap sm:text-base dark:text-gray-600">
               {user?.photoURL || " Photo Url:  url not found"}
             </p>
-            <Link to={'/profile'} className="btn bg-[#FF5A3D] hover:bg-[#FF5A3D] text-white">Edit you information</Link>
+            <Link  to={'/profile'} className="btn bg-[#FF5A3D] hover:bg-[#FF5A3D] text-white" data-aos="fade-up"
+     data-aos-duration="1500">Edit you information</Link>
           </div>
         </div>
         <div className="flex justify-center pt-2 space-x-4 align-center">

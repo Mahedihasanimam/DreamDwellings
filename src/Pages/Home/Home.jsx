@@ -45,7 +45,8 @@ const Home = () => {
           <Slider4></Slider4>
         </SwiperSlide>
       </Swiper>
-<div className="my-20 text-center">
+<div className="my-20 text-center" data-aos="fade-up"
+     data-aos-duration="3000">
   <h1 className="text-4xl font-bold "> Top Listed Estate</h1>
   <p className="opacity-70"> we offers luxury properties with modern amenities and breathtaking views in prime locations worldwide</p>
 </div>
