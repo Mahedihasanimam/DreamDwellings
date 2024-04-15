@@ -21,6 +21,11 @@ const Navbar = () => {
    isActive ? "text-[#FF5A3D] no-underline" : " no-underline"
   }>User profile</NavLink>
     </li>
+    <li className="font-semibold">
+        <NavLink  to={'/contact'} className={({ isActive}) =>
+   isActive ? "text-[#FF5A3D] no-underline" : " no-underline"
+  }>Contact Us</NavLink>
+    </li>
     </>
   return (
     <div className="navbar px-0">
@@ -44,14 +49,14 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-[#F2F6F7] h-lvh w-52"
           >
           {
             navbar
           }
           </ul>
         </div>
-        <h1 className="lg:text-4xl text-xl font-bold"><span className="text-[#FF5A3D]">D</span>ream Dwellings</h1>
+        <Link to={'/'} className="lg:text-4xl no-underline text-xl font-bold"><span className="text-[#FF5A3D]">D</span>ream Dwellings</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -67,10 +72,10 @@ const Navbar = () => {
     user? <div className="flex items-center gap-4">
       <div className="avatar">
     <div className="w-12 rounded-full">
-      <img title={user?.displayName} src={user?.photoURL} />
+      <img title={user?.displayName || "name not found"} src={user?.photoURL || "https://source.unsplash.com/30x30/?random"} />
     </div>
   </div>
-      <button onClick={logout} className="relative px-5 py-3 overflow-hidden font-bold no-underline  text-white bg-[#FF5A3D] border border-gray-100 rounded-lg shadow-inner group">
+      <button onClick={logout} className="relative px-5 py-3 overflow-hidden font-bold no-underline cursor-pointer text-white bg-[#FF5A3D] border border-gray-100 rounded-lg shadow-inner group">
     <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
     <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
     <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>

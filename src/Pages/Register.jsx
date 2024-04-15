@@ -5,10 +5,12 @@ import { AuthContext } from "../Route/AuthProvider";
 
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import auth from "../firbase/firbase.config";
 
 const Register = () => {
     const {createUser,logout}=useContext(AuthContext)
-   
+    const photoRegex = /^https?:\/\/(?:www\.)?[^\s/$.?#].[^\s]*$/;
     const navigate=useNavigate()
   const {
     register,
@@ -25,14 +27,31 @@ const Register = () => {
   const onSubmit = (data) => {
     const regex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
     const password=data.password
+    const name=data.Username
+    const photoUrl=data.photo
+   
+    if(!photoRegex.test(photoUrl)){
+		return toast.error("Provide a valid URL");
+	}
+
+    console.log(password,name,photoUrl)
     if(!regex.test(password)){
-      return toast.error('password should be a uppercase,a Lowercase and must be at least 6 character')
+      return toast.error('password shouldbe an uppercase,a Lowercase and must be at least 6 character')
     }
     createUser(data.mail,data.password)
     .then(result=>{
       navigate('/login')
       logout()
-     return toast.success('registared succesfully')
+      toast.success('registared succesfully')
+
+      updateProfile(auth.currentUser, {
+        displayName: name,
+         photoURL: photoUrl
+      }).then((result) => {
+        console.log(result)
+      }).catch((error) => {
+        console.log(error)
+      });
     })
     .catch(err=>{
       return toast.error('Invalid email or password')
@@ -46,7 +65,7 @@ const Register = () => {
          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
            <div className="space-y-1 text-sm">
              <label htmlFor="username" className="block font-bold">
-               Username
+               Name
              </label>
              <input
                type="text"
@@ -86,7 +105,7 @@ const Register = () => {
                type="text"
                name="photo"
                id="photo"
-               placeholder="pest your photoURL"
+               placeholder="https://"
                className="w-full lg:px-2  py-3 rounded-md  border-gray-700 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
              
                {...register("photo", { required: "photo url is required" })}
@@ -126,7 +145,7 @@ const Register = () => {
            <Link to={'/login'}
              rel="noopener noreferrer"
              href="#"
-             className="underline text-blue-600"
+             className="underline text-blue-600 font-bold"
            >
              Login
            </Link>

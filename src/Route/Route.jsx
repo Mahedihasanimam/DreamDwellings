@@ -10,6 +10,7 @@ import Details from "../Pages/Home/Details";
 import ErrPage from "./ErrPage";
 import UserProfile from "../Pages/Home/UserProfile";
 import PrivateRoute from "./PrivateRoute";
+import Contact from "./Contact";
 
 
 
@@ -32,6 +33,10 @@ export const router=createBrowserRouter([
             {
                 path:'/user',
                 element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
+            },
+            {
+                path:'/contact',
+                element:<PrivateRoute><Contact></Contact></PrivateRoute>
             }
             ,
             {

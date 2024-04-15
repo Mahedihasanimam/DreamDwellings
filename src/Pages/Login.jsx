@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Route/AuthProvider";
 import toast from "react-hot-toast";
 const Login = () => {
-  const {login,googleLogin}=useContext(AuthContext)
+  const {login,googleLogin,githubLogin}=useContext(AuthContext)
   const location=useLocation()
   console.log(location)
   const navigate=useNavigate()
@@ -20,11 +20,11 @@ const Login = () => {
     .then(result=>{
       toast.success('Login succesfully')
       navigate('/')
-      console.log(result)
+
     })
     .catch(err=>{
       toast.error(err.message.slice(10))
-      console.log(err)
+
     })
    
   } 
@@ -35,11 +35,23 @@ const handlegoogle=()=>{
   .then(result=>{
     toast.success('Login succesfully')
     navigate(location?.state || '/')
-    console.log(result)
+
   })
   .catch(err=>{
     toast.error(err.message.slice(10))
-    console.log(err)
+   
+  })
+}
+const handlegithub=()=>{
+  githubLogin()
+  .then(result=>{
+    toast.success('Login succesfully')
+    navigate(location?.state || '/')
+
+  })
+  .catch(err=>{
+    toast.error(err.message.slice(10))
+
   })
 }
   return (
@@ -60,7 +72,7 @@ const handlegoogle=()=>{
             className="w-full lg:px-2  py-3 rounded-md  border-blue-600 border-opacity-30 bg-white opacity-90  focus:border-violet-400"
             {...register("email", { required: true })}
           />
-          {errors.email && <span>This field is required</span>}
+          {errors.email && <span className="text-red-500">This field is required</span>}
     
         </div>
         <div className="space-y-1 text-sm">
@@ -75,7 +87,7 @@ const handlegoogle=()=>{
             className="w-full lg:px-2 py-3 rounded-md  border-opacity-30 border-blue-600   focus:border-violet-400"
             {...register("password", { required: true })}
           />
-          {errors.password && <span>This field is required</span>}
+          {errors.password && <span className="text-red-500">This field is required</span>}
           <div className="flex justify-end text-xs text-gray-400">
             <a className="text-blue-600" rel="noopener noreferrer" href="#">
               Forgot Password?
@@ -110,7 +122,7 @@ const handlegoogle=()=>{
             <path d="M31.937 6.093c-1.177 0.516-2.437 0.871-3.765 1.032 1.355-0.813 2.391-2.099 2.885-3.631-1.271 0.74-2.677 1.276-4.172 1.579-1.192-1.276-2.896-2.079-4.787-2.079-3.625 0-6.563 2.937-6.563 6.557 0 0.521 0.063 1.021 0.172 1.495-5.453-0.255-10.287-2.875-13.52-6.833-0.568 0.964-0.891 2.084-0.891 3.303 0 2.281 1.161 4.281 2.916 5.457-1.073-0.031-2.083-0.328-2.968-0.817v0.079c0 3.181 2.26 5.833 5.26 6.437-0.547 0.145-1.131 0.229-1.724 0.229-0.421 0-0.823-0.041-1.224-0.115 0.844 2.604 3.26 4.5 6.14 4.557-2.239 1.755-5.077 2.801-8.135 2.801-0.521 0-1.041-0.025-1.563-0.088 2.917 1.86 6.36 2.948 10.079 2.948 12.067 0 18.661-9.995 18.661-18.651 0-0.276 0-0.557-0.021-0.839 1.287-0.917 2.401-2.079 3.281-3.396z"></path>
           </svg>
         </button>
-        <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+        <button onClick={handlegithub} aria-label="Log in with GitHub" className="p-3 rounded-sm cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
@@ -125,7 +137,7 @@ const handlegoogle=()=>{
         <Link to={'/register'}
           rel="noopener noreferrer"
           href="#"
-          className="underline text-blue-600"
+          className="underline text-blue-600 font-bold"
         >
           Sign up
         </Link>
