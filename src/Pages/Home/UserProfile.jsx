@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Route/AuthProvider";
 import { Link } from "react-router-dom";
+import PageTitle from "../../components/PageTitle";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
   return (
     <div className="flex flex-col justify-center max-w-lg p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 mt-4 mx-auto">
+      <PageTitle title={'User Profile'}></PageTitle>
       <img
         src={user?.photoURL || "https://source.unsplash.com/30x30/?random"}
         alt="profile pic"
@@ -22,7 +24,7 @@ const UserProfile = () => {
           </p>
           <div className="">
             <p className=" text-xs  text-wrap sm:text-base dark:text-gray-600">
-              {user?.photoURL || " Photo Url:  url not found"}
+              { user.photoURL && user?.photoURL.substring(0,30) || " Photo Url:  url not found"}...
             </p>
             <Link  to={'/profile'} className="btn bg-[#FF5A3D] hover:bg-[#FF5A3D] text-white" data-aos="fade-up"
      data-aos-duration="1500">Edit you information</Link>

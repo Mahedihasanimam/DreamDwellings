@@ -4,9 +4,10 @@ import { updateProfile } from "firebase/auth";
 import auth from "../../firbase/firbase.config";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import PageTitle from "../../components/PageTitle";
 
 const Profile = () => {
-  const { user } = useContext(AuthContext);
+  const { user,setuser} = useContext(AuthContext);
   const photoRegex = /^https?:\/\/(?:www\.)?[^\s/$.?#].[^\s]*$/;
   const navigate=useNavigate()
   const handleSaveChanges = (e) => {
@@ -26,6 +27,9 @@ const Profile = () => {
       .then((result) => {
         toast.success("SaveChanges succesfully 👍");
 		navigate('/user')
+    // window.location.reload()
+    setuser({...user,displayName: name,
+      photoURL: photo,})
       })
       .catch((error) => {
         console.log(error);
@@ -33,6 +37,7 @@ const Profile = () => {
   };
   return (
     <div>
+      <PageTitle title={'UPdate Profile'}></PageTitle>
       <form onSubmit={handleSaveChanges}>
         <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50  bg-[#F2F6F7] py-28 ">
         <legend className="p-1">EDIT YOUR PROFILE</legend>
@@ -44,14 +49,14 @@ const Profile = () => {
                   data-aos-duration="1500">
             <div className="col-span-full sm:col-span-3">
               <label htmlFor="username" className="text-sm">
-                Username
+                Name
               </label>
               <input
                 id="username"
                 type="text"
                 name="username"
-                placeholder="Username"
-                required
+                value={user?.displayName}
+              
                 className="w-full p-3  rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
             </div>
@@ -64,12 +69,24 @@ const Profile = () => {
                 id="website"
                 name="photo"
                 type="text"
-                placeholder="https://"
-                required
+                
+               
                 className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
+            </div> <br />
+            <div className="col-span-full sm:col-span-3">
+              <label htmlFor="email" className="text-sm">
+                Email
+              </label>
+              <input
+                id="email"
+                type="text"
+                name="email"
+                value={user?.email}
+                disabled
+                className="w-full p-3  rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+              />
             </div>
-
             <div className="col-span-full"  data-aos="fade-up"
                   data-aos-duration="1500">
               <div className="flex items-center space-x-2">

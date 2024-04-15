@@ -14,6 +14,7 @@ import Slider3 from "../../slider/Slider3";
 import Slider4 from "../../slider/Slider4";
 import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
+import PageTitle from "../../components/PageTitle";
 const Home = () => {
   const [card,setCard]=useState([])
   useEffect(()=>{
@@ -23,6 +24,7 @@ const Home = () => {
   },[])
   return (
     <div>
+      <PageTitle title={'Home'}></PageTitle>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
         effect="fade"

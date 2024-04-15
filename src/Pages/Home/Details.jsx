@@ -1,4 +1,5 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import PageTitle from "../../components/PageTitle";
 
 const Details = () => {
   const { id } = useParams();
@@ -16,7 +17,9 @@ const Details = () => {
     facilities,
   } = allData;
   return (
+
     <div className="card lg:card-side bg-base-100 shadow-xl">
+      <PageTitle title={'Property Details'}></PageTitle>
       <figure className="bg-gray-200 rounded-lg m-5 p-10 lg:w-2/5">
         <img className="" src={image} alt="Album" />
       </figure>

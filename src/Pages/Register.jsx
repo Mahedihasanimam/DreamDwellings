@@ -9,6 +9,7 @@ import { updateProfile } from "firebase/auth";
 import auth from "../firbase/firbase.config";
 import { VscEyeClosed } from "react-icons/vsc";
 import { RxEyeOpen } from "react-icons/rx";
+import PageTitle from "../components/PageTitle";
 const Register = () => {
     const {createUser,logout}=useContext(AuthContext)
     const photoRegex = /^https?:\/\/(?:www\.)?[^\s/$.?#].[^\s]*$/;
@@ -62,6 +63,7 @@ const Register = () => {
   }
     return (
         <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover" >
+          <PageTitle title={'Register'}></PageTitle>
         <div className=" max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black" data-aos="fade-up"
      data-aos-duration="1000">
          <h1 className="text-2xl font-bold text-center">Register</h1>

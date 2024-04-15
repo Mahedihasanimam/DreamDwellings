@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form"
 import { useContext } from "react";
 import { AuthContext } from "../Route/AuthProvider";
 import toast from "react-hot-toast";
+import PageTitle from "../components/PageTitle";
 const Login = () => {
   const {login,googleLogin,githubLogin}=useContext(AuthContext)
   const location=useLocation()
@@ -57,7 +58,8 @@ const handlegithub=()=>{
   return (
     
    <div className="bg-bgimg bg-bottom  h-full p-4 bg-no-repeat bg-cover " >
-     <div className=" max-w-md my-4 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black " data-aos="fade-up"
+    <PageTitle title={'Login'}></PageTitle>
+     <div className=" max-w-md my-2 mx-auto p-8 space-y-3 rounded-xl  bg-white opacity-70 text-black " data-aos="fade-up"
      data-aos-duration="1000">
       <h1 className="text-2xl font-bold text-center">Login</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
