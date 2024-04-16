@@ -20,8 +20,9 @@ const Details = () => {
 
     <div className="card lg:card-side bg-base-100 shadow-xl">
       <PageTitle title={'Property Details'}></PageTitle>
-      <figure className="bg-gray-200 rounded-lg m-5 p-10 lg:w-2/5">
-        <img className="" src={image} alt="Album" />
+      <figure className="bg-gray-200 rounded-lg m-5 p-2  lg:w-2/5">
+        <img className="w-full" src={image} alt="Album"  data-aos="zoom-in"
+                data-aos-duration="1000"/>
       </figure>
       <div className="card-body lg:w-1/2">
         <span>{id}</span>
