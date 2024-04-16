@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBzo0Q19Be40TllOUOhHubG-nAuudPKX0U",
-  authDomain: "dreamdwellings-fd041.firebaseapp.com",
-  projectId: "dreamdwellings-fd041",
-  storageBucket: "dreamdwellings-fd041.appspot.com",
-  messagingSenderId: "199540789725",
-  appId: "1:199540789725:web:e692d7957aaf37ec86a634"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
