@@ -16,7 +16,6 @@ const UserProfile = () => {
       <div className="space-y-4 text-center divide-y dark:divide-gray-300">
         <div className="my-2 space-y-1">
           <h2 className="text-xl font-semibold sm:text-2xl">
-            {" "}
             {user?.displayName || " Name: Name not found"}
           </h2>
           <p className="px-5 text-xs sm:text-base dark:text-gray-600">

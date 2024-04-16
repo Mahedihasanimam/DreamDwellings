@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Route/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firbase/firbase.config";
@@ -8,6 +8,9 @@ import PageTitle from "../../components/PageTitle";
 
 const Profile = () => {
   const { user,setuser} = useContext(AuthContext);
+  const {displayName,photoURL}=user
+  const [val,setVl]=useState(displayName)
+  const [url,setUrl]=useState(photoURL)
   const photoRegex = /^https?:\/\/(?:www\.)?[^\s/$.?#].[^\s]*$/;
   const navigate=useNavigate()
   const handleSaveChanges = (e) => {
@@ -35,6 +38,12 @@ const Profile = () => {
         console.log(error);
       });
   };
+  const namevaluechange=(event)=>{
+    setVl(event.target.value)
+  }
+  const urlvalchange=(event)=>{
+    setUrl(event.target.value)
+  }
   return (
     <div>
       <PageTitle title={'UPdate Profile'}></PageTitle>
@@ -52,13 +61,15 @@ const Profile = () => {
                 Name
               </label>
               <input
+              onChange={namevaluechange}
                 id="username"
                 type="text"
                 name="username"
-                value={user?.displayName}
+                value={val}
               
-                className="w-full p-3  rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                className="w-full p-3 border-none rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
+              
             </div>
             <br />
             <div className="col-span-full sm:col-span-3">
@@ -66,12 +77,13 @@ const Profile = () => {
                 Photo Url
               </label>
               <input
+              onChange={urlvalchange}
                 id="website"
                 name="photo"
                 type="text"
                 
-               
-                className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+               value={url}
+                className="w-full p-3 rounded-md focus:ring border-none focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
             </div> <br />
             <div className="col-span-full sm:col-span-3">
@@ -82,7 +94,7 @@ const Profile = () => {
                 id="email"
                 type="text"
                 name="email"
-                value={user?.email}
+                value={user?.email || "email not found"}
                 disabled
                 className="w-full p-3  rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
