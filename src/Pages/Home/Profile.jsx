@@ -67,7 +67,7 @@ const Profile = () => {
                 name="username"
                 value={val}
               
-                className="w-full p-3 border-none rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                className="w-full p-3 text-black border-none rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
               
             </div>
@@ -83,7 +83,7 @@ const Profile = () => {
                 type="text"
                 
                value={url}
-                className="w-full p-3 rounded-md focus:ring border-none focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                className="w-full text-black p-3 rounded-md focus:ring border-none focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
             </div> <br />
             <div className="col-span-full sm:col-span-3">
@@ -96,7 +96,7 @@ const Profile = () => {
                 name="email"
                 value={user?.email || "email not found"}
                 disabled
-                className="w-full p-3  rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
+                className="w-full p-3 text-black rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300"
               />
             </div>
             <div className="col-span-full"  data-aos="fade-up"
