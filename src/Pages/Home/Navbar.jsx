@@ -28,7 +28,7 @@ const Navbar = () => {
     </li>
     </>
   return (
-    <div className="navbar px-0 fixed  z-50 max-w-[1440px]  top-0 shadow-sm mb-[200px] bg-white opacity-80">
+    <div className="navbar px-0 fixed  z-50 max-w-[1440px]  top-0 shadow-sm  bg-white opacity-80">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,7 +67,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-      <div className="">
+      <div className=" px-4">
   {
     user? <div className="flex items-center gap-4">
       <div className="avatar">
