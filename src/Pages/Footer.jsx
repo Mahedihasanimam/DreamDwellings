@@ -79,6 +79,15 @@ const Footer = () => {
                   <FaArrowRight className="mr-1" />{" "}
                   <Link
                     className="text-white no-underline opacity-70"
+                    to={"/contact"}
+                  >
+                    contact
+                  </Link>
+                </li>
+                <li className="hover:text-red-500">
+                  <FaArrowRight className="mr-1" />{" "}
+                  <Link
+                    className="text-white no-underline opacity-70"
                     to={"/login"}
                   >
                     Login
