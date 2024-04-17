@@ -32,6 +32,9 @@ Extra Route: An additional extra route is contact us route and user profile
  2. Animate.css: use for animation.
  3. React Hook form : hook form is used to handle login and registaiton validation
  4. Swiper slider : swiper slider is an amazing package for smuth slide.
+ 5. React hot-toast: hot toast is used for showing toast
+ 6. AOS : it's used for animation in my website
+ 7. react helmet : helmet is use for daynamic title.
 
 Deployment and Hosting
 The website is hosted on Firebase.
