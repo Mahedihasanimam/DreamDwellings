@@ -72,7 +72,7 @@ const Home = () => {
           <SingleCard key={idx} carditem={carditem}></SingleCard>
         ))}
       </div>
-      <div className="bg-[#F2F6F7] p-8 mt-8 ">
+      <div className="bg-[#F2F6F74C] p-8 mt-8 ">
 
           <h1 className="text-4xl text-center font-bold pb-2">
             {" "}
