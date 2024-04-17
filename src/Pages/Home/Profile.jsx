@@ -9,7 +9,15 @@ import PageTitle from "../../components/PageTitle";
 const Profile = () => {
   const { user,setuser} = useContext(AuthContext);
   const {displayName,photoURL}=user
+
   const [val,setVl]=useState(displayName)
+
+
+
+
+
+
+  
   const [url,setUrl]=useState(photoURL)
   const photoRegex = /^https?:\/\/(?:www\.)?[^\s/$.?#].[^\s]*$/;
   const navigate=useNavigate()

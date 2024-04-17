@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const Slider3 = () => {
     return (
         <div className=" bg-[#F2F6F7]  max-h-[600px] min-h-[600px]">
-      <div className="lg:flex md:flex  justify-between items-center">
+      <div className="lg:flex md:flex  justify-between items-center py-20">
         <div className="lg:px-24 md:px-4 p-8 ">
           <h1 className="lg:text-4xl md:text-xl font-bold">
-            Find Your Dream <br /> House By Us
+          Choose Your Ideal <br /> SANCTUARY Now!
           </h1>
           <div className="border-l-4 border-r-0 border-t-0 border-b-0 border-solid mb-8 border-[#FF5A3D]">
             <p className=" ml-4 ">
@@ -29,8 +29,8 @@ const Slider3 = () => {
           </Link>
         </div>
 
-        <div className="w-1/2 py-8">
-          <img src="/src/assets/img/undraw_best_place_re_lne9.svg" alt="" />
+        <div className="" >
+          <img className="" src="https://i.ibb.co/4KhMHyC/png-transparent-house-house-angle-building-apartment-thumbnail-removebg-preview.png" alt="" />
         </div>
       </div>
     </div>

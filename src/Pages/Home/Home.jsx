@@ -15,16 +15,19 @@ import Slider4 from "../../slider/Slider4";
 import { useEffect, useState } from "react";
 import SingleCard from "./SingleCard";
 import PageTitle from "../../components/PageTitle";
+import Review from "./Review";
+import About from "./About"
+
 const Home = () => {
-  const [card,setCard]=useState([])
-  useEffect(()=>{
-   fetch('realstate.json')
-    .then(res=>res.json())
-    .then(data=>setCard(data))
-  },[])
+  const [card, setCard] = useState([]);
+  useEffect(() => {
+    fetch("realstate.json")
+      .then((res) => res.json())
+      .then((data) => setCard(data));
+  }, []);
   return (
     <div>
-      <PageTitle title={'Home'}></PageTitle>
+      <PageTitle title={"Home"}></PageTitle>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
         effect="fade"
@@ -47,16 +50,37 @@ const Home = () => {
           <Slider4></Slider4>
         </SwiperSlide>
       </Swiper>
-<div className="my-20 text-center" data-aos="fade-up"
-     data-aos-duration="3000">
-  <h1 className="text-4xl font-bold "> Top Listed Estate</h1>
-  <p className="opacity-70"> we offers luxury properties with modern amenities and breathtaking views in prime locations worldwide</p>
-</div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 ">
-          {
-            card.map((carditem,idx)=><SingleCard key={idx} carditem={carditem}></SingleCard>)
-          }
+
+      <div>
+     
+        <About></About>
       </div>
+      <div
+        className="my-20 text-center"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+        <h1 className="text-4xl font-bold "> Top Listed Estate</h1>
+        <p className="opacity-70">
+          {" "}
+          we offers luxury properties with modern amenities and breathtaking
+          views in prime locations worldwide
+        </p>
+      </div>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 ">
+        {card.map((carditem, idx) => (
+          <SingleCard key={idx} carditem={carditem}></SingleCard>
+        ))}
+      </div>
+      <div className="bg-[#F2F6F7] p-8 mt-8 ">
+
+          <h1 className="text-4xl text-center font-bold pb-2">
+            {" "}
+            What People Say
+          </h1>
+        <Review></Review>
+      </div>
+    
     </div>
   );
 };

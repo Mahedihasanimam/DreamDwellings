@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const Slider2 = () => {
     return (
         <div className=" bg-[#F2F6F7]  max-h-[600px] min-h-[600px]">
-      <div className="lg:flex md:flex  justify-between items-center">
+      <div className="lg:flex md:flex justify-between items-center">
         <div className="lg:px-24 md:px-4 p-8 "data-aos="fade-up"
      data-aos-duration="1000">
           <h1 className="lg:text-4xl md:text-xl font-bold">
-            Find Your Dream <br /> House By Us
+          Discover Your Perfect <br /> RETREAT Today!
           </h1>
           <div className="border-l-4 border-r-0 border-t-0 border-b-0 border-solid mb-8 border-[#FF5A3D]">
             <p className=" ml-4 ">
@@ -31,8 +31,8 @@ const Slider2 = () => {
           </Link>
         </div>
 
-        <div className="w-1/2 ">
-          <img  src="/src/assets/img/undraw_for_sale_re_egkk.svg"  alt="" />
+        <div className="">
+          <img  src="https://i.ibb.co/VQ3k0TD/png-transparent-house-property-real-estate-investing-buyer-house-investment-apartment-renting-remove.png"  alt="" />
         </div>
       </div>
     </div>

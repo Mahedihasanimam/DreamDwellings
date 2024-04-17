@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import 'animate.css';
 const Slide1 = () => {
   return (
-    <div className=" bg-[#F2F6F7]   max-h-[600px] min-h-[600px]">
+    <div className=" bg-[#F2F6F7] py-8  max-h-[600px] min-h-[600px]">
       <div className="lg:flex md:flex  justify-between items-center">
         <div className="lg:px-24 md:px-4 p-8 " data-aos="fade-up"
      data-aos-easing="linear"
@@ -31,8 +31,8 @@ const Slide1 = () => {
           </Link>
         </div>
 
-        <div className=" lg:py-8 animate__animated animate__fadeInRight ">
-          <img src="/src/assets/img/heroimg.png" alt="" />
+        <div className=" animate__animated animate__fadeInRight ">
+          <img src="https://i.ibb.co/9w0xFKz/heroimg.png" alt="" />
         </div>
       </div>
     </div>

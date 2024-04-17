@@ -8,7 +8,7 @@ const SingleCard = ({ carditem }) => {
   return (
     <Link className="no-underline" to={`/details/${id}`}>
       <div className="" data-aos="fade-up" data-aos-duration="1000">
-        <div className="card card-compact text-black  bg-base-100 border-2 border-solid border-gray-200 shadow-xl hover:shadow-2xl">
+        <div className="card card-compact text-black  bg-base-100 border-2 border-solid border-gray-200 shadow-lg  hover:shadow-2xl">
           <img className="p-4 rounded-3xl " src={image} alt="Home"  data-aos="zoom-in"
                 data-aos-duration="1000"/>
           <div className="absolute top-1 right-4 ">

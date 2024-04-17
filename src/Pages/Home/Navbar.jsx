@@ -12,14 +12,14 @@ const Navbar = () => {
   } >Home</NavLink>
     </li>
     <li className="font-semibold">
-        <NavLink  to={'/profile'} className={({ isActive}) =>
-   isActive ? "text-[#FF5A3D] bg-gray-300 no-underline" : " text-black no-underline"
-  }>Update profile</NavLink>
-    </li>
-    <li className="font-semibold">
         <NavLink  to={'/user'} className={({ isActive}) =>
    isActive ? "text-[#FF5A3D] bg-gray-300 no-underline" : " text-black no-underline"
   }>User profile</NavLink>
+    </li>
+    <li className="font-semibold">
+        <NavLink  to={'/profile'} className={({ isActive}) =>
+   isActive ? "text-[#FF5A3D] bg-gray-300 no-underline" : " text-black no-underline"
+  }>Update profile</NavLink>
     </li>
     <li className="font-semibold">
         <NavLink  to={'/contact'} className={({ isActive}) =>
