@@ -42,8 +42,6 @@ Install the necessary dependencies using npm install.
 Set up your Firebase project and obtain the Firebase configuration keys.
 Store the Firebase configuration keys in a .env file in the root of your project directory.
 Run the project using npm start.
-Commit History
-Ensure the repository has at least 10 notable GitHub commits. Check the commit history to verify the development process and progress.
 
 Contributing
 If you have suggestions or feedback on the website, feel free to create an issue or submit a pull request.
