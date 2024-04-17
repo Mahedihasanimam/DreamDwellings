@@ -23,7 +23,7 @@ const UserProfile = () => {
           </p>
           <div className="">
             <p className=" text-xs  text-wrap sm:text-base dark:text-gray-600">
-              { user.photoURL && user?.photoURL.substring(0,30) || " Photo Url:  url not found"}...
+              { user.photoURL && user?.photoURL.substring(0,40) || " Photo Url:  url not found"}...
             </p>
             <Link  to={'/profile'} className="btn bg-[#FF5A3D] hover:bg-[#FF5A3D] text-white" data-aos="fade-up"
      data-aos-duration="1500">Edit you information</Link>
